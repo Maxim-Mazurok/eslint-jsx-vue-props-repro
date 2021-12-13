@@ -1,10 +1,18 @@
 import * as tsx from "vue-tsx-support";
 import { VNode } from "vue";
-import HelloWorld from "./components/HelloWorld";
 
 export default tsx.component({
   name: "App",
+  data: {
+    x: 0,
+    y: 0
+  },
   render(): VNode {
-    return <HelloWorld msg={"123"} />;
+    return (
+      <div>
+        <input v-model={this.x} />
+        <input vModel={this.y} />
+      </div>
+    );
   }
 });
